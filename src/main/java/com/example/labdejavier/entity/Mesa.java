@@ -24,15 +24,16 @@ public class Mesa {
     private String nombre;
 
     @NotNull
-    @Column(name = "cantidad", nullable = false)
-    private Integer cantidad;
+    @Column(name = "capacidad", nullable = false)
+    private Integer capacidad;
 
     @NotNull
-    @Column(name = "disponibilidad", nullable = false)
-    private Integer disponibilidad;
+    @Column(name = "cantidadDisponible", nullable = false)
+    private Integer cantidadDisponible;
 
+    @Size(max = 45)
     @NotNull
-    @Column(name = "eliminado", nullable = false)
-    private Integer eliminado;
+    @Column(name = "ubicacion", nullable = false, length = 45)
+    private String ubicacion;
 
 }

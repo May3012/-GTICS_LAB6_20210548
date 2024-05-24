@@ -20,9 +20,9 @@ public class Usuario {
     @Column(name = "nombre", nullable = false, length = 45)
     private String nombre;
 
-    @Size(max = 256)
+    @Size(max = 45)
     @NotNull
-    @Column(name = "apellido", nullable = false, length = 256)
+    @Column(name = "apellido", nullable = false, length = 45)
     private String apellido;
 
     @Size(max = 45)
@@ -30,9 +30,9 @@ public class Usuario {
     @Column(name = "correo", nullable = false, length = 45)
     private String correo;
 
-    @Size(max = 45)
+    @Size(max = 256)
     @NotNull
-    @Column(name = "contrasena", nullable = false, length = 45)
+    @Column(name = "contrasena", nullable = false, length = 256)
     private String contrasena;
 
     @NotNull
@@ -40,7 +40,7 @@ public class Usuario {
     private Integer activo;
 
     @NotNull
-    @ManyToOne(optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "idRol", nullable = false)
     private Rol idRol;
 

@@ -17,11 +17,6 @@ public class Reserva {
 
     @Size(max = 45)
     @NotNull
-    @Column(name = "tipo", nullable = false, length = 45)
-    private String tipo;
-
-    @Size(max = 45)
-    @NotNull
     @Column(name = "fechafin", nullable = false, length = 45)
     private String fechafin;
 
